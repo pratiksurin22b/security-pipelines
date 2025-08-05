@@ -1,35 +1,21 @@
-﻿# security-pipelines
+# 🔐 Security Pipelines
 
+This repository serves as the central hub for reusable security-focused CI/CD pipelines. It is designed to be consumed by other repositories across the organization to ensure secure and compliant software delivery practices.
 
----
+## 💡 Purpose
+- Provide standardized security checks across all projects
+- Automate vulnerability scanning and license checks
+- Enforce static code analysis and secrets detection
+- Integrate with GitHub Actions or other CI systems
 
-### 🧪 **`sample-app` — Test Application Repository**
+## 📦 Features
+- Trivy, OWASP ZAP, Snyk integration
+- Reusable GitHub Actions workflows
+- Secrets scanning
+- License and dependency audits
+- Pull request-based security feedback
 
-> **Description (short):**  
-> A lightweight test application used to validate and demonstrate reusable CI/CD security pipelines.
-
-> **README.md (long version):**
-```md
-# 🧪 Sample App
-
-This repository contains a basic demo application used for testing and demonstrating reusable security pipelines provided by the `security-pipelines` repository.
-
-## 🧰 Tech Stack
-- Language: [Node.js / Python / Java / etc.]
-- CI/CD: GitHub Actions
-- Integration with `your-org/security-pipelines`
-
-## ✅ Objectives
-- Act as a testbed for pipeline development
-- Simulate real-world PRs and deployments
-- Validate scanning tools and security enforcement
-
-## 🚀 Getting Started
-1. Clone this repository
-2. Open a pull request to trigger security checks
-3. Review pipeline results in GitHub Actions
-
-## 🔒 Security
-All pipelines are consumed from:
+## 🧩 Usage
+Other repositories (like `sample-app`) can include these workflows via:
 ```yaml
 uses: your-org/security-pipelines/.github/workflows/security.yml@main
